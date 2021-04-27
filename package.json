@@ -1,0 +1,33 @@
+{
+  "name": "wayfair",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "download_schema": "ts-node -e \"require('./generator.ts').download_schema('generated/schema.json')\"",
+    "schema_to_class": "ts-node -e \"require('./generator.ts').schema_to_class('generated/schema.json', 'generated/class.ts')\""
+  },
+  "author": "",
+  "license": "ISC",
+  "contributors": [
+    {
+      "name": "Mendel Jacks",
+      "email": "mendeljacks@gmail.com",
+      "url": "http://mendeljacks.com"
+    }
+  ],
+  "devDependencies": {
+    "cross-spawn": "^7.0.3",
+    "get-graphql-schema": "^2.1.2"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules",
+      "generated"
+    ],
+    "watch": [
+      "./"
+    ],
+    "ext": "ts, js"
+  }
+}
