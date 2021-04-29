@@ -11,7 +11,7 @@ can be obtained by registering an application with the wayfair portal.
 npm i wayfair  // Or yarn add wayfair
 ```
 
-## Obtain a client id and client secret from wayfair portal
+## Authentication
 The auth object is required to be provided for every request, and
 tokens will automatically be refreshed when they expire.
 ```js
