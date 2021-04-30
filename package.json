@@ -4,8 +4,8 @@
   "description": "",
   "main": "lib/wayfair_connector.js",
   "scripts": {
-    "download_schema": "ts-node -e \"require('./generator.ts').download_schema('generated/schema.json')\"",
-    "schema_to_class": "ts-node -e \"require('./generator.ts').schema_to_class('generated/schema.json', 'generated/class.ts')\"",
+    "download_schema": "ts-node -e \"require('./src/generator.ts').download_schema('generated/schema.json')\"",
+    "schema_to_class": "ts-node -e \"require('./src/generator.ts').schema_to_class('generated/schema.json', 'generated/class.ts')\"",
     "tsc": "tsc src/wayfair_connector --declaration --outDir lib --target es3"
   },
   "author": "",

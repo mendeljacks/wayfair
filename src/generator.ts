@@ -121,7 +121,7 @@ export const schema_to_class = async (schema_path, class_path) => {
     mutate_${ fn_name } = async (
         auth: { client_id: string, client_secret: string, base_url: string },
         mutation: {__args: ${ gql_to_ts(args, schema) } } & DeepReplace<${ response_type.slice(-2) == '[]' ? response_type.slice(0, -2) : response_type }>
-    ): Promise<${ response_type }> => ax(auth, {mutation: \`{$\{jsonToGraphQLQuery({ ${ field.name }: mutation})}}\`})
+    ): Promise<${ response_type }> => ax(auth, {query: \`mutation {$\{jsonToGraphQLQuery({ ${ field.name }: mutation})}}\`})
     `
         })
 

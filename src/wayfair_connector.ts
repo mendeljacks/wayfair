@@ -507,7 +507,7 @@ query catalog {
     mutate_applications = async (
         auth: { client_id: string, client_secret: string, base_url: string },
         mutation: {__args: ApplicationMutator } & DeepReplace<ApplicationMutator>
-    ): Promise<ApplicationMutator> => ax(auth, {mutation: `{${jsonToGraphQLQuery({ applications: mutation})}}`})
+    ): Promise<ApplicationMutator> => ax(auth, {query: `mutation {${jsonToGraphQLQuery({ applications: mutation})}}`})
     
 	
     /**
@@ -518,7 +518,7 @@ query catalog {
     mutate_catalog_projects = async (
         auth: { client_id: string, client_secret: string, base_url: string },
         mutation: {__args: CatalogProjectMutator } & DeepReplace<CatalogProjectMutator>
-    ): Promise<CatalogProjectMutator> => ax(auth, {mutation: `{${jsonToGraphQLQuery({ catalogProjects: mutation})}}`})
+    ): Promise<CatalogProjectMutator> => ax(auth, {query: `mutation {${jsonToGraphQLQuery({ catalogProjects: mutation})}}`})
     
 	
     /**
@@ -531,7 +531,7 @@ Click into a mutation below to see an example of the that mutation.
     mutate_inventory = async (
         auth: { client_id: string, client_secret: string, base_url: string },
         mutation: {__args: InventoryMutator } & DeepReplace<InventoryMutator>
-    ): Promise<InventoryMutator> => ax(auth, {mutation: `{${jsonToGraphQLQuery({ inventory: mutation})}}`})
+    ): Promise<InventoryMutator> => ax(auth, {query: `mutation {${jsonToGraphQLQuery({ inventory: mutation})}}`})
     
 	
     /**
@@ -544,7 +544,7 @@ Click into a mutation below to see an example of the that mutation.
     mutate_product_inventory = async (
         auth: { client_id: string, client_secret: string, base_url: string },
         mutation: {__args: InventoryMutator } & DeepReplace<InventoryMutator>
-    ): Promise<InventoryMutator> => ax(auth, {mutation: `{${jsonToGraphQLQuery({ productInventory: mutation})}}`})
+    ): Promise<InventoryMutator> => ax(auth, {query: `mutation {${jsonToGraphQLQuery({ productInventory: mutation})}}`})
     
 	
     /**
@@ -557,7 +557,7 @@ NOTE: Purchase order mutations are under active development and should be consid
     mutate_purchase_orders = async (
         auth: { client_id: string, client_secret: string, base_url: string },
         mutation: {__args: PurchaseOrderMutator } & DeepReplace<PurchaseOrderMutator>
-    ): Promise<PurchaseOrderMutator> => ax(auth, {mutation: `{${jsonToGraphQLQuery({ purchaseOrders: mutation})}}`})
+    ): Promise<PurchaseOrderMutator> => ax(auth, {query: `mutation {${jsonToGraphQLQuery({ purchaseOrders: mutation})}}`})
     
 }
 export const wayfair = new Wayfair()
